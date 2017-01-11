@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: raboy1997
+  password: vfrc1997
+
+development:
+  <<: *default
+  database: nathnennya_development
+
+
+test:
+  <<: *default
+  database: nathnennya_test
+
+production:
+  <<: *default
+  database: nathnennya_production
+  username: raboy1997
+  password: vfrc1997
