@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :posts
   root "static_pages#index"
   get '/history' , to: 'static_pages#history'

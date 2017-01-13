@@ -1,5 +1,32 @@
 <div id="templatemo_body_wrapper1">
-  <div id="templatemo_wrapper"><span id="templatemo_wrapper_top"></span>
+  <div id="templatemo_wrapper">
+    <div id="templatemo_header">
+    <div id="site_title"><a href="#">Натхнення</a></div>
+    <div id="templatemo_menu" class="ddsmoothmenu">
+      <ul>
+        <li><%=link_to 'Головна' , index_path%></li>
+        <li><%= link_to 'Історія' , history_path  %>
+          <ul><li><span class="top"></span><span class="bottom"></span></li>
+            <li><a href="#submenu1">Sub menu 1</a></li>
+          </ul>
+        </li>
+        <li><%= link_to 'Галерея' , gallery_path %>
+          <ul><li><span class="top"></span><span class="bottom"></span></li>
+            <li><a href="#submenu1">Sub menu 1</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Розклад </a></li>
+        <li><%=link_to 'Контакти' , contact_path%>
+          <% if user_signed_in? %>
+            <li class="active">  <%= link_to "Вийти", destroy_user_session_path, :method => :delete %> </li>
+        <% else %>
+            <li class="active"><%= link_to "Увійти", new_user_session_path %> </li>
+        <% end %>
+
+
+      </ul>
+    </div>
+  </div>
 
     <div id="templatemo_main">
       <div class="col col23">

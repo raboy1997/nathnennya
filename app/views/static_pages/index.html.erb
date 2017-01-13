@@ -1,5 +1,32 @@
 <div id="templatemo_body_wrapper1">
-  <div id="templatemo_wrapper"><span id="templatemo_wrapper_top"></span>
+  <div id="templatemo_wrapper">
+    <div id="templatemo_header">
+    <div id="site_title"><a href="#">Натхнення</a></div>
+    <div id="templatemo_menu" class="ddsmoothmenu">
+      <ul>
+        <li><%=link_to 'Головна' , index_path%></li>
+        <li><%= link_to 'Історія' , history_path  %>
+          <ul><li><span class="top"></span><span class="bottom"></span></li>
+            <li><a href="#submenu1">Sub menu 1</a></li>
+          </ul>
+        </li>
+        <li><%= link_to 'Галерея' , gallery_path %>
+          <ul><li><span class="top"></span><span class="bottom"></span></li>
+            <li><a href="#submenu1">Sub menu 1</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Розклад </a></li>
+        <li><%=link_to 'Контакти' , contact_path%>
+          <% if user_signed_in? %>
+            <li class="active">  <%= link_to "Вийти", destroy_user_session_path, :method => :delete %> </li>
+        <% else %>
+            <li class="active"><%= link_to "Увійти", new_user_session_path %> </li>
+        <% end %>
+
+
+      </ul>
+    </div>
+  </div>
     <div id="templatemo_main">
 
       <div id="templatemo_slider">
@@ -41,6 +68,29 @@
           <p>Fusce id elit dolor, sit amet lacinia purus. Donec iaculis ullamcorper ipsum id tristique. Donec eget nisl tortor, eu congue felis. Ut blandit auctor odio nec viverra.</p>
           <a href="#">More</a>
         </div>
+        <div class="col col13 no_margin_right">
+          <h2>Services</h2>
+          <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut metus arcu, vitae congue purus.</em></p>
+          <p>Sed massa lectus, pretium in consequat non, sagittis quis nisl. Aenean quis enim lorem. Cras bibendum magna quis urna dapibus convallis. Sed at lorem elit.</p>
+          <ul class="tmo_ul_list">
+            <li class="first"><a href="#">Sed eget purus</a></li>
+            <li><a href="#">Vestibulum eleifend</a></li>
+            <li><a href="#">Nulla odio ipsum</a></li>
+            <li><a href="#">Suspendisse posuere</a></li>
+            <li><a href="#">Nunc a dui sed</a></li>
+            <li><a href="#">Curabitur ac mauris</a></li>
+            <li><a href="#">Mauris nulla tortor</a></li>
+            <li><a href="#">Nullam ultrices</a></li>
+          </ul>
+          <div class="cleaner h40"></div>
+          <div id="newsletter">
+
+
+
+            <div class="cleaner"></div>
+          </div>
+        </div>
+        <div class="cleaner"></div>
 
         <div class="cleaner"></div>
       </div>
