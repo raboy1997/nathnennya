@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nathnennya</title>
+    <title>Натхнення</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'application/favicon' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+
   </head>
 
   <body>
 
-  <%= yield %>
+
+  <%= render 'layouts/headers' %>
+
   <%=render 'layouts/footer'%>
-
-
 
   </body>
 </html>

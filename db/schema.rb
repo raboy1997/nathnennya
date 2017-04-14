@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113210223) do
+ActiveRecord::Schema.define(version: 20170120181819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,12 +29,48 @@ ActiveRecord::Schema.define(version: 20170113210223) do
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
   end
 
+  create_table "galleries", force: :cascade do |t|
+    t.string   "g_title"
+    t.string   "g_body"
+    t.string   "g_link"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "g_img_file_name"
+    t.string   "g_img_content_type"
+    t.integer  "g_img_file_size"
+    t.datetime "g_img_updated_at"
+  end
+
   create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "body"
-    t.string   "post_img"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "post_title"
+    t.string   "post_body"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "post_img_file_name"
+    t.string   "post_img_content_type"
+    t.integer  "post_img_file_size"
+    t.datetime "post_img_updated_at"
+  end
+
+  create_table "sliders", force: :cascade do |t|
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "s_img_file_name"
+    t.string   "s_img_content_type"
+    t.integer  "s_img_file_size"
+    t.datetime "s_img_updated_at"
+  end
+
+  create_table "timetables", force: :cascade do |t|
+    t.string   "t_title"
+    t.string   "t_body"
+    t.string   "t_link"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "t_img_file_name"
+    t.string   "t_img_content_type"
+    t.integer  "t_img_file_size"
+    t.datetime "t_img_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

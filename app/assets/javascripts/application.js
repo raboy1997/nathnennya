@@ -11,6 +11,17 @@
 // about supported directives.
 //
 //= require jquery
+//= require fancybox
 //= require jquery_ujs
-//= require turbolinks
+//= require bxslider
+
 //= require_tree .
+
+
+$(document).ready(function(){
+    $('.bxslider').bxSlider();
+});
+
+$(document).ready(function() {
+    $("a.fancybox").fancybox();
+});

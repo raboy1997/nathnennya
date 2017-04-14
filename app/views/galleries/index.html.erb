@@ -1,0 +1,18 @@
+
+
+<div id="templatemo_main">
+  <% @galleries.each do |gallery| %>
+      <ul id="gallery">
+        <li >
+          <h4><%= gallery.g_title  %></h4>
+          <a class="fancybox" href='<%= image_tag (gallery.g_img.url)  %>' title=""><%= image_tag gallery.g_img.url  , size: '350x222'  %></a>
+          <p><%= gallery.g_body %></p>
+          <a><%= link_to "Більше" , gallery.g_link , :class => "more" %></a>
+        </li>
+      </ul>
+
+  <% end %>
+  </div>
+  <div class="cleaner"></div>
+</div>
+

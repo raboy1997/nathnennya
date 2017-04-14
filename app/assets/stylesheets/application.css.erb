@@ -11,13 +11,14 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require bxslider
  *= require_self
+ *= require fancybox
+
  */
 
-/*
-	Beauty Class Template
-	http://www.templatemo.com/preview/templatemo_353_beauty_class
-*/
+
+
 
 body {
     margin: 0;
@@ -62,7 +63,9 @@ h6 { font-size:12px }
 
 a:link, a:visited { color:#ff0d40}
 a:visited { text-decoration:none }
-a:hover { text-decoration:none }
+a:hover { background: #007DA7;
+    box-shadow: 0 0 3px ;
+}
 a:hover,a:active { outline:none }
 
 a.more {
@@ -177,13 +180,17 @@ a.more {
     font-family: Georgia, "Times New Roman", Times, serif;
     width: 350px;
     height: 54px;
-    color: #acacac;
+    color:#eaeaea;
     text-indent: -10000px;
-    background: url(<%= asset_path("templatemo_logo.png") %>) no-repeat center left;
+    background: url(<%= asset_path("logo1.png") %>) no-repeat center left;
+}
+
+#site_title:hover {
+    box-shadow: 0 0 0 ;
 }
 
 #templatemo_menu {
-    float: right;
+    float: none;
     margin-top: 15px;
 }
 
@@ -398,7 +405,7 @@ a.more {
     margin-right: 14px;
 }
 
-#contact_form form .input_field {
+#contact_form form #contact_name {
     width: 164px;
     padding: 5px;
     color: #222;
@@ -883,4 +890,29 @@ a.nivo-prevNav {
 
 #lbCaption {
     font-weight: bold;
+}
+
+/*********
+pagination
+*/
+
+.pagination{
+    margin-right: 30%;
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: auto;
+
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+
 }

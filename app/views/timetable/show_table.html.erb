@@ -1,0 +1,11 @@
+<div id="templatemo_main">
+  <% @timetables.each do |table| %>
+
+      <%= image_tag table.t_img.url , :class => "img_fl img_border" , size: '222x222'  %>
+      <h3><%= table.t_title %></h3>
+      <p><%=  table.t_body     %></p>
+      <%= link_to 'Переглянути розклад ' , table.t_link  %>
+      <div class="cleaner h40"></div>
+
+  <%end%>
+</div>
